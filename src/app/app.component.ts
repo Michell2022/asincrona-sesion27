@@ -7,9 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
+  title!: string;
   valor1!:number;
   valor2!:number;
-  operacion!: string;
+  operacion: string = "Eliga la operación";
   resultado: number = 0;
 
 

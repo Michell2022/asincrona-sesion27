@@ -1,36 +1,43 @@
-<div>
-  <div>
-    <h1>Calculadora</h1>
-  </div>
-  <div>
+<h1>{{title}}</h1>
+<div class="h-screen flex flex-col justify-center ">
+  <div class="w-2/5 mx-auto my-auto border p-8 rounded bg-white shadow-[0_0_10px_1px_rgba(0,0,0,0.2)] ">
     <div>
-      <label for="datouno">Primer número:</label>
-      <input type="number" name="datouno" id="datouno" [(ngModel)]="valor1">
+      <h1 class="text-3xl text-center mb-5">Calculadora</h1>
+    </div>
+    <div>
+      <div>
+        <label for="datouno">Primer número:</label>
+      </div>
+      <div>
+        <input class="border rounded w-full py-2 px-2" type="number" name="datouno" id="datouno" [(ngModel)]="valor1">
+      </div>
+      <br>
+      <div>
+        <label for="datodos">Segundo número:</label>
+      </div>
+      <div>
+        <input class="border rounded w-full py-2 px-2" type="number" name="datodos" id="datodos" [(ngModel)]="valor2">
+      </div>
     </div>
     <br>
     <div>
-      <label for="datodos">Segundo número:</label>
-      <input type="number" name="datodos" id="datodos" [(ngModel)]="valor2">
+      <select class="border rounded py-2 w-full px-2" name="operacion" id="operacion" [(ngModel)]="operacion">
+        <option>Eliga la operación</option>
+        <option value="suma">Suma</option>
+        <option value="resta">Resta</option>
+        <option value="division">División</option>
+        <option value="multiplicacion">Multiplicación</option>
+      </select>
+    </div>
+    <br>
+    <div>
+      <button class="bg-blue-500 text-[18px] text-white py-2 w-full rounded duration-300 hover:bg-blue-600" (click)="ejecutarOperacion()">Calcular</button>
+    </div>
+    <div class="mt-6">
+      <p class="text-[17px]">El resultado es: <span class="text-blue-500 text-[20px]">{{resultado}}</span></p>
     </div>
   </div>
-  <br>
-  <div>  
-    <select name="operacion" id="operacion" [(ngModel)]="operacion">
-      <option value="suma">Suma</option>
-      <option value="resta">Resta</option>
-      <option value="division">División</option>
-      <option value="multiplicacion">Multiplicación</option>
-    </select>
-  </div>
-  <br>
-  <div>
-    <button (click)="ejecutarOperacion()">Calcular</button>
-  </div>
-  <div>
-    <p>El resultado es: {{resultado}}</p>
-  </div>
 </div>
-
 
 
 
