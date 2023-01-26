@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-  title!: string;
+  title = 'testing';
   valor1!:number;
   valor2!:number;
   operacion: string = "Eliga la operación";
