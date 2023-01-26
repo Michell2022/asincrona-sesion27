@@ -1,4 +1,4 @@
-<h1>{{title}}</h1>
+<h1 class="titulo">{{title}}</h1>
 <div class="h-screen flex flex-col justify-center ">
   <div class="w-2/5 mx-auto my-auto border p-8 rounded bg-white shadow-[0_0_10px_1px_rgba(0,0,0,0.2)] ">
     <div>
@@ -33,13 +33,14 @@
     <div>
       <button class="bg-blue-500 text-[18px] text-white py-2 w-full rounded duration-300 hover:bg-blue-600" (click)="ejecutarOperacion()">Calcular</button>
     </div>
+
     <div class="mt-6">
-      <p class="text-[17px]">El resultado es: <span class="text-blue-500 text-[20px]">{{resultado}}</span></p>
+        <p class="text-[18px]" *ngIf="!error">El resultado es: <span class="text-green-500 text-[18px]">{{resultado}}</span></p>
+        <p *ngIf="error"><span class="text-red-500 text-[18px]">{{error}}</span></p>
     </div>
+
   </div>
 </div>
-
-
 
 
 
